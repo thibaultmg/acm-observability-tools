@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: user-metrics
+  name: metrics-server
+  labels:
+    app: metrics-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: metrics-server
+  template:
+    metadata:
+      labels:
+        app: metrics-server
+    spec:
+      containers:
+      - name: metrics-server
+        image: ghcr.io/rhobs/prometheus-example-app:0.4.1
+        ports:
+        - containerPort: 8080
+          name: web
+          protocol: TCP
+        # command: ["/bin/sh"]
+        # args: ["/scripts/serve_metrics.sh"]
+
+
+
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   labels:
+#     app: prometheus-example-app
+#   name: prometheus-example-app
+#   namespace: ns1
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: prometheus-example-app
+#   template:
+#     metadata:
+#       labels:
+#         app: prometheus-example-app
+#     spec:
+#       containers:
+#       - image: ghcr.io/rhobs/prometheus-example-app:0.4.1
+#         imagePullPolicy: IfNotPresent
+#         name: prometheus-example-app

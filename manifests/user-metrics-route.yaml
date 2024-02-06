@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    cert-manager.io/issuer-kind: ClusterIssuer
+    cert-manager.io/issuer-name: letsencrypt-prod-http
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/name: metrics-server
+  name: metrics-server
+  namespace: user-metrics
+spec:
+  host: ""
+  port:
+    targetPort: web
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: metrics-server
+    weight: null

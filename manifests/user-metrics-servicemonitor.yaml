@@ -1,0 +1,16 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    k8s-app: metrics-server
+  name: metrics-server
+  namespace: user-metrics
+spec:
+  endpoints:
+  - interval: 15s
+    port: web
+    scheme: http
+    # path: "/"
+  selector:
+    matchLabels:
+      app: metrics-server
