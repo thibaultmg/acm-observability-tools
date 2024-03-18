@@ -4,3 +4,4 @@ metadata:
   name: open-cluster-management-observability 
   labels:
     name: open-cluster-management-observability
+    openshift.io/cluster-monitoring: "true"

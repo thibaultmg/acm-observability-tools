@@ -1,0 +1,8 @@
+[
+    {
+      "image-name": "multicluster-observability-operator",
+      "image-tag": "2.8.6-PR1352-a9b08baa6aa4c9fa721905b0e3fbe64d6757bd34",
+      "image-remote": "quay.io/stolostron",
+      "image-key": "multicluster_observability_operator"
+    }
+  ]
