@@ -1,0 +1,4 @@
+# Is updated with the pull secret value
+manifests/pull-secret.yaml 
+# Is updated with the image overrides value
+image-overrides.json

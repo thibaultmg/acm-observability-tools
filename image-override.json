@@ -1,8 +1,20 @@
 [
     {
       "image-name": "multicluster-observability-operator",
-      "image-tag": "2.8.6-PR1352-a9b08baa6aa4c9fa721905b0e3fbe64d6757bd34",
+      "image-tag": "2.11.0-PR1507-d59325c75c7d5036dddfa397a39fe19f68a1a187",
       "image-remote": "quay.io/stolostron",
       "image-key": "multicluster_observability_operator"
+    },
+    {
+      "image-name": "endpoint-monitoring-operator",
+      "image-tag": "2.11.0-PR1507-d59325c75c7d5036dddfa397a39fe19f68a1a187",
+      "image-remote": "quay.io/stolostron",
+      "image-key": "endpoint_monitoring_operator"
+    },
+    {
+      "image-name": "metrics-collector",
+      "image-tag": "2.11.0-PR1507-d59325c75c7d5036dddfa397a39fe19f68a1a187",
+      "image-remote": "quay.io/stolostron",
+      "image-key": "metrics_collector"
     }
   ]
